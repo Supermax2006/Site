@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>Погода</h1>
+
+  <label for="city">Введите название города: </label>
+  <input type="text" id="city">
+  <button onclick="getRequest()">Ok</button>
+
+  <p>Температура: <span id="deg"></span>℃</p>
+  <p>Ветер: <span id="windspeed"></span>м/с</p>
+  <p>Давление: <span id="pressure"></span>Мм. р. с.</p>
+  <p>Влажность: <span id="humidity"></span>%</p>
+  <p>Направление ветра: <span id="winddeg"></span></p>
+  <script>
+    async function getRequest(){
+      let cityName = document.querySelector('#city').value;
+
+      let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=c3f93d23f4afc931f07743b1f8a9ffc6`);
+      if (response.ok){
+        let json = await response.json();
+        console.log(json)
+        document.querySelector('#deg').textContent = Math.floor(json.main.temp - 273.15)
+        document.querySelector('#windspeed').textContent = Math.floor(json.wind.speed/2.237)
+        document.querySelector('#pressure').textContent = Math.floor(json.main.pressure/133)
+        document.querySelector('#humidity').textContent = Math.floor(json.main.humidity)
+        let route = json.wind.deg;
+        if(route>=337.51 || route<=22.5){
+          document.querySelector('#winddeg').textContent = 'Север';
+        }
+        if(route>=22.51 && route<=67.50){
+          document.querySelector('#winddeg').textContent = 'Северо-Восток';
+        }
+        if(route>=67.51 && route<=112.50){
+          document.querySelector('#winddeg').textContent = 'Восток';
+        }
+        if(route>=112.51 && route<=157.50){
+          document.querySelector('#winddeg').textContent = 'Юго-Восток';
+        }
+        if(route>=157.51 && route<=202.50){
+          document.querySelector('#winddeg').textContent = 'Юг';
+        }
+        if(route>=202.51 && route<=247.50){
+          document.querySelector('#winddeg').textContent = 'Юго-Запад';
+        }
+        if(route>=247.51 && route<=292.50){
+          document.querySelector('#winddeg').textContent = 'Запад';
+        }
+        if(route>=292.51 && route<=337.50){
+          document.querySelector('#winddeg').textContent = 'Северо-Запад';
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

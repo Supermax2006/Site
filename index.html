@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветствие</title>
+</head>
+<body>
+    <button onclick="show()" id="one">Тема</button>
+    <script>
+        tema = 'light';
+        function show() {
+          if (tema == 'light') {
+            document.querySelector('#one').textContent = 'Светлая тема';
+            document.querySelector('html').style.backgroundColor = 'black';
+            document.querySelector('.two').style.color = 'white';
+            document.querySelector('.two2').style.color = 'white';
+            document.querySelector('.two3').style.color = 'white';
+            document.querySelector('.two4').style.color = 'white';
+            document.querySelector('.two5').style.color = 'white';
+            document.querySelector('.two6').style.color = 'white';
+            document.querySelector('.two7').style.color = 'white';
+            document.querySelector('.two8').style.color = 'white';
+            document.querySelector('.two9').style.color = 'white';
+            tema = 'black';
+          }
+          else if (tema == 'black') {
+            document.querySelector('#one').textContent = 'Тёмная тема';
+            document.querySelector('html').style.backgroundColor = 'white';
+            document.querySelector('.two').style.color = 'black';
+            document.querySelector('.two2').style.color = 'black';
+            document.querySelector('.two3').style.color = 'black';
+            document.querySelector('.two4').style.color = 'black';
+            document.querySelector('.two5').style.color = 'black';
+            document.querySelector('.two6').style.color = 'black';
+            document.querySelector('.two7').style.color = 'black';
+            document.querySelector('.two8').style.color = 'black';
+            document.querySelector('.two9').style.color = 'black';
+            tema = 'light';
+          }
+    
+        }
+      </script>
+</body>
+</html>
