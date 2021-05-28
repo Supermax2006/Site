@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приветствие</title>
 </head>
-<body>
-  <div class="bgimage">
-     <img alt="" src="/Image/bgg.jpg" width="337" height="1080">
-</div>
-<div class="bgimage1">
-  <img alt="" src="/Image/bgg1.jpg" width="337" height="1080">
-</div>
+<body background-color="#000000">
+  <header>
+    <ul class="nav">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Блог</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">О сайте</a></li>
+  </ul>
+  </header>
     <button onclick="show()" id="one">Тема</button>
-    <button onclick="show_img()" id="two">Фоновые изображения</button>
     <h1 class="fadeIn">Я съел деда</h1>
     <script>
         tema = 'light';
@@ -46,6 +47,7 @@
             bg = '1';
           }
         }
-      </script>
+</script>
+      
 </body>
 </html>
