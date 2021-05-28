@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>Погода</h1>
+
+  <label for="city">Введите название аниме: </label>
+  <input type="text" id="city">
+  <button id="city1" onclick="getRequest()">Ok</button>
+  <script>
+    async function getRequest(){
+      let cityName = document.querySelector('#city').value;
+    }
+    document.write('<a href="https://yandex.ru/search/?text='+cityName+'&lr=971&src=suggest_B"></a>');
+  </script>
+</body>
+</html>
