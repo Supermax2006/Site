@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="SHORTCUT ICON" href="Image/ava.jpg">
+</head>
+<body>
+  <header>
+  <ul class="nav">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="anime.html">Найти аниме</a></li>
+    <li><a href="history.html">История</a></li>
+    <li><a href="connection.html">Контакты</a></li>
+</ul>
+</header>
+  <button onclick="show()" id="one">Тема сайта</button>
+  <h1 class="fadeIn">Вы можете связаться с нами!</h1>
+  <div class="new fadeIn">
+  <a href="https://vk.com/animetagan" target="_blank"><img src="Image/vk.png" height="200px" width="200px"></a>
+  <p class="p4">Вконтакте</p>
+  </div>
+  <div class="new fadeIn">
+    <a href="https://www.facebook.com/profile.php?id=100023910997751" target="_blank"><img src="Image/facebook.png" height="200px" width="200px"></a>
+    <p class="p1">Facebook</p>
+    </div>
+    <div class="new fadeIn">
+      <a href="https://t.me/SupermaxYT" target="_blank"><img src="Image/telegram.png" height="200px" width="200px"></a>
+      <p class="p2">Telegram</p>
+      </div>
+      <div class="new fadeIn">
+        <a href="https://wa.me/qr/LR733ZNA6GDGM1" target="_blank"><img src="Image/whatsapp.png" height="200px" width="200px"></a>
+        <p class="p3">WhatsApp</p>
+        </div>
+  <script>
+    tema = 'chocolate';
+        function show() {
+          if (tema == 'light') {
+            document.querySelector('#one').textContent = 'Тема: тёмная';
+            document.querySelector('html').style.backgroundColor = 'black';
+            document.querySelector('h1').style.color = 'white';
+            document.querySelector('.p1').style.color = 'white';
+            document.querySelector('.p2').style.color = 'white';
+            document.querySelector('.p3').style.color = 'white';
+            document.querySelector('.p4').style.color = 'white';
+            tema = 'black';
+          }
+          else if (tema == 'black') {
+            document.querySelector('#one').textContent = 'Тема: шоколад';
+            document.querySelector('html').style.backgroundColor = 'chocolate';
+            document.querySelector('h1').style.color = 'black';
+            document.querySelector('.p1').style.color = 'black';
+            document.querySelector('.p2').style.color = 'black';
+            document.querySelector('.p3').style.color = 'black';
+            document.querySelector('.p4').style.color = 'black';
+            tema = 'chocolate';
+          }
+          else if (tema='chocolate'){
+            document.querySelector('#one').textContent = 'Тема: белая';
+            document.querySelector('html').style.backgroundColor = 'white';
+            document.querySelector('h1').style.color = 'black';
+            document.querySelector('.p1').style.color = 'black';
+            document.querySelector('.p2').style.color = 'black';
+            document.querySelector('.p3').style.color = 'black';
+            document.querySelector('.p4').style.color = 'black';
+            tema = 'light';
+          }
+        }
+        if(tema='chocolate'){
+          document.querySelector('html').style.backgroundColor = 'chocolate'
+          document.querySelector('h1').style.color = 'black';
+            document.querySelector('.p1').style.color = 'black';
+            document.querySelector('.p2').style.color = 'black';
+            document.querySelector('.p3').style.color = 'black';
+        }
+  </script>
+</body>
+
+</html>

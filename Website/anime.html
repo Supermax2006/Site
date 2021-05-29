@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Найти аниме</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="SHORTCUT ICON" href="Image/ava.jpg">
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="anime.html">Найти аниме</a></li>
+      <li><a href="history.html">История</a></li>
+      <li><a href="connection.html">Контакты</a></li>
+  </ul>
+  </header>
+  <button onclick="show()" id="one">Тема сайта</button>
+  <h1 class="fadeIn">Поиск аниме</h1>
+  <div class="fadeIn search">
+  <label for="city" class="label">Введите название: </label>
+  <input type="text" id="city">
+  <button id="city1" onclick="getRequest()">Найти</button>
+</div>
+
+  <script>
+    function getRequest(){
+      let cityName = document.querySelector('#city').value;
+      document.location.href='https://www.google.ru/search?q=аниме+'+(cityName)+'&newwindow=1&sxsrf=ALeKk01j2GPrNh4qIxLmAjBTEDLzBfBRSA%3A1622292843012&source=hp&ei=ajmyYKKlO--SrgTOsq2oBA&iflsig=AINFCbYAAAAAYLJHe09f6W3gNQ07MFefEPNgMICHNzqR&oq=fybvt&gs_lcp=Cgdnd3Mtd2l6EAEYADIICAAQChABECoyBggAEAoQATIHCAAQsQMQCjIKCC4QsQMQgwEQCjIECC4QCjIKCAAQsQMQgwEQCjIECAAQCjIGCAAQChABMgQIABAKMgcIABCxAxAKOgcIIxDqAhAnOggIABCxAxCDAToICC4QsQMQgwE6BQgAELEDOgsIABCxAxDHARCjAjoCCAA6CQgAELEDEAoQAToMCC4QsQMQgwEQChABOgYILhAKEAFQ4gtY0xVg1B5oAXAAeACAAVOIAZEDkgEBNZgBAKABAaoBB2d3cy13aXqwAQo&sclient=gws-wiz'
+  }
+  let tema = 'chocolate';
+  if(tema=='chocolate'){
+          document.querySelector('html').style.backgroundColor = 'chocolate'
+        }
+        function show() {
+          if (tema == 'light') {
+            document.querySelector('#one').textContent = 'Тема: тёмная';
+            document.querySelector('html').style.backgroundColor = 'black';
+            document.querySelector('h1').style.color = 'white';
+            document.querySelector('.label').style.color = 'white';
+            tema = 'black';
+          }
+          else if (tema == 'black') {
+            document.querySelector('#one').textContent = 'Тема: шоколад';
+            document.querySelector('html').style.backgroundColor = 'chocolate';
+            document.querySelector('h1').style.color = 'black';
+            document.querySelector('.label').style.color = 'black';
+            tema = 'chocolate';
+          }
+          else if (tema=='chocolate'){
+            document.querySelector('#one').textContent = 'Тема: белая';
+            document.querySelector('html').style.backgroundColor = 'white';
+            document.querySelector('h1').style.color = 'black';
+            document.querySelector('.label').style.color = 'black';
+            tema = 'light';
+          }
+        }
+  </script>
+</body>
+</html>

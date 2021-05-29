@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>AniMax</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="SHORTCUT ICON" href="Image/ava.jpg">
+    <style>
+      body{
+        background-color: black;
+      }
+      p{
+        z-index: 3;
+        color: rgb(255, 255, 255);
+        opacity: 1;
+	font-family: Arial;
+  font-size: 10em;
+	color: #FFFFFF;
+  text-align: center;
+	text-shadow: 
+		-0   -2px 0   #000000,
+		 0   -2px 0   #000000,
+		-0    2px 0   #000000,
+		 0    2px 0   #000000,
+		-2px -0   0   #000000,
+		 2px -0   0   #000000,
+		-2px  0   0   #000000,
+		 2px  0   0   #000000,
+		-1px -2px 0   #000000,
+		 1px -2px 0   #000000,
+		-1px  2px 0   #000000,
+		 1px  2px 0   #000000,
+		-2px -1px 0   #000000,
+		 2px -1px 0   #000000,
+		-2px  1px 0   #000000,
+		 2px  1px 0   #000000,
+		-2px -2px 0   #000000,
+		 2px -2px 0   #000000,
+		-2px  2px 0   #000000,
+		 2px  2px 0   #000000,
+		-2px -2px 0   #000000,
+		 2px -2px 0   #000000,
+		-2px  2px 0   #000000,
+		 2px  2px 0   #000000;
+      }
+    </style>
+</head>
+<body>
+  <div id="nubexDiv" class="overlay">
+    <a href="index.html" onclick="DoIt()"><video id="nubexVideo" width="100%" height="auto" loop muted autoplay preload="auto">
+      <source src="Video/nubex.webm">
+    </video></a>
+   </div>
+   <p>Добро пожаловать в AniMax!</p>
+   <button class="start"><a href="index.html">Перейти на сайт</a></button>
+   <script>
+	   let x = 0
+	   function DoIt(){
+		   alert("Предупреждение! Все ссылки, за исключением навигационного меню, адресованы на посторонние сайты.")
+		   if(x=0){
+			document.location.href="index.html"
+		   }
+	   }
+   </script>
+</body>
+</html>

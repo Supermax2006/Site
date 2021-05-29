@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="SHORTCUT ICON" href="Image/ava.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+      .h1{
+        font-size: 50px;
+      }
+      h2{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <ul class="nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="anime.html">Найти аниме</a></li>
+      <li><a href="history.html">История</a></li>
+      <li><a href="connection.html">Контакты</a></li>
+  </ul>
+  </header>
+    <button onclick="show()" id="one">Тема сайта</button>
+    <h1 class="h1 fadeIn">Главная страница</h1>
+    <h2 class="h2 fadeIn">Новинки в мире аниме</h2>
+    <div class="new fadeIn">
+      <a href="https://www.kinopoisk.ru/series/2044807/"><img src="Image/heal.jpg" height="400px" width="400px"></a>
+      <p class="p1">Маг-целтель: новый старт</p>
+    </div>
+    <div class="new fadeIn">
+      <a href="https://www.kinopoisk.ru/series/1432450/"><img src="Image/0_edem.jpg" height="400px" width="400px"></a>
+      <p class="p2">Нулевой эдем</p>
+    </div>
+    <div class="new fadeIn">
+    <a href="https://www.kinopoisk.ru/series/4428441/"><img src="Image/86.jpg" height="400px" width="400px"></a>
+      <p class="p3">86</p>
+      </div>
+    <script>
+        tema = 'chocolate';
+        function show() {
+          if (tema == 'light') {
+            document.querySelector('#one').textContent = 'Тема: тёмная';
+            document.querySelector('html').style.backgroundColor = 'black';
+            document.querySelector('.p1').style.color = 'white';
+            document.querySelector('.p2').style.color = 'white';
+            document.querySelector('.p3').style.color = 'white';
+            document.querySelector('h1').style.color = 'white';
+            document.querySelector('h2').style.color = 'white';
+            tema = 'black';
+          }
+          else if (tema == 'black') {
+            document.querySelector('#one').textContent = 'Тема: шоколад';
+            document.querySelector('html').style.backgroundColor = 'chocolate';
+            document.querySelector('.p1').style.color = 'black';
+            document.querySelector('.p2').style.color = 'black';
+            document.querySelector('.p3').style.color = 'black';
+            document.querySelector('h1').style.color = 'black';
+            document.querySelector('h2').style.color = 'black';
+            tema = 'chocolate';
+          }
+          else if (tema='chocolate'){
+            document.querySelector('#one').textContent = 'Тема: белая';
+            document.querySelector('html').style.backgroundColor = 'white';
+            document.querySelector('.p1').style.color = 'black';
+            document.querySelector('.p2').style.color = 'black';
+            document.querySelector('.p3').style.color = 'black';
+            document.querySelector('.h1').style.color = 'black';
+            document.querySelector('.h2').style.color = 'black';
+            tema = 'light';
+          }
+        }
+        if(tema='chocolate'){
+          document.querySelector('html').style.backgroundColor = 'chocolate'
+          document.querySelector('p').style.Color = 'black';
+        }
+</script>
+      
+</body>
+</html>
