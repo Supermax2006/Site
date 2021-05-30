@@ -7,6 +7,13 @@
   <title>Найти аниме</title>
   <link rel="stylesheet" href="style.css">
   <link rel="SHORTCUT ICON" href="Image/ava.jpg">
+  <style>
+    .img{
+          text-align: center;
+          margin: 10px auto 20px;
+          display: block;
+      }
+  </style>
 </head>
 <body>
   <header>
@@ -24,7 +31,7 @@
   <input type="text" id="city">
   <button id="city1" onclick="getRequest()">Найти</button>
 </div>
-
+<img class="img fadeIn" src="Image/all.jpg">
   <script>
     function getRequest(){
       let cityName = document.querySelector('#city').value;
