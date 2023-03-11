@@ -1,0 +1,173 @@
+    body{
+        background-image: url(images/background.png);
+
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .images li {
+        display: inline-block;
+        vertical-align: center;
+        margin-top: 3%;
+        padding-left: 7%;
+        vertical-align: middle
+    }
+    
+    .qr li{
+        display: inline-block;
+        vertical-align: center;
+        padding-top: 28%;
+        padding-left: 5.3%;
+        vertical-align: middle
+    }
+
+
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+    .menu-main {
+      list-style: none;
+      margin: 0px;
+      padding: 25px 0 5px;
+      text-align: center;
+      background: rgba(0, 110, 255, 0.3) url(images/logo.png);
+      background-repeat: no-repeat;
+      height: 70pt;
+    }
+    .menu-main ul {
+        padding-left: 100px;
+    }
+
+    .menu-main li {
+        display: inline-block;
+        vertical-align: center;
+        margin-top: 17pt;
+    }
+
+    .menu-main li:after {
+      content: "|";
+      color: #ffffff;
+      display: inline-block;
+      vertical-align:center;
+    }
+    .menu-main li:last-child:after {content: none;}
+    .menu-main a {
+      text-decoration: none;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 20px;
+      margin: 0 34px 0 30px;
+      font-size: 17px;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: color .2s;
+    }
+    .menu-main a, .menu-main a:visited {color: #ffffff;}
+    .menu-main a.current, .menu-main a:hover{color: #feb386;}
+    .menu-main a:before,
+    .menu-main a:after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      top: auto;
+      right: 50%;
+      bottom: -5px;
+      left: 50%;
+      background: #feb386;
+      transition: .8s;
+    }
+    .menu-main a:hover:before, .menu-main .current:before {left: 0;}
+    .menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+    @media (max-width: 550px) {
+    .menu-main {padding-top: 0;}
+    .menu-main li {display: block;}
+    .menu-main li:after {content: none;}
+    .menu-main a {
+      padding: 25px 0 20px; 
+      margin: 0 30px;
+    }
+    }
+    .block{
+      text-align: left;
+      margin-right: 1300px;
+      margin-left: 200px;
+    }
+    .block_row{
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      border: 20px solid #ece89d;
+      margin: 0px 0px 20px 0px;
+    }
+    .block_column{
+      border: 20px solid #5e5373;
+      flex: 1 1 auto;
+      flex-direction: column;
+      margin: 0px 20px 0px 20px;
+  }
+  .img{
+    margin-top: 30px;
+  }
+  .bottom{
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+/*Обнуляция страницы*/
+
+
+
+
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
